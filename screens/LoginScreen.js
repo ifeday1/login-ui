@@ -1,17 +1,13 @@
 import { View, Text, Image, TextInput, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
-import { FadeIn, FadeOut } from 'react-native-reanimated';
-import { AnimatedImage } from 'react-native-reanimated/lib/typescript/reanimated2/component/Image';
-
-
-
+import Animated,{ FadeIn, FadeInUp, FadeOut } from 'react-native-reanimated';
 
 export default function LoginScreen() {
   return (
     <View className=' bg-white h-full w-full'>
       <StatusBar style='light' />
-      <Animated.Image e
+      <Image
         className=' h-full w-full absolute'
         source={require('../assests/images/background.png')}
       />
@@ -19,6 +15,7 @@ export default function LoginScreen() {
       {/* lights */}
       <View className=' flex-row justify-around w-full absolute'>
         <Image
+
           className='h-[225] w-[90]'
           source={require('../assests/images/light.png')}
         />
